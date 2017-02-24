@@ -3,8 +3,8 @@
 </template>
 
 <script>
-const theme = 'base16-dark'
-const mode = 'javascript'
+const theme = 'mdn-like'
+const mode = 'xml'
 const CodeMirror = require('codemirror/lib/codemirror.js')
 require('codemirror/lib/codemirror.css')
 
@@ -30,6 +30,7 @@ export default {
       default: function () {
         return {
           mode: mode,
+          htmlMode: true,
           line: true,
           lineNumbers: true,
           lineWrapping: true,
@@ -54,10 +55,10 @@ export default {
 
   created () {
     // Require language mode config & basic addons.
-    require(`codemirror/mode/javascript/javascript.js`)
+    require(`codemirror/mode/xml/xml.js`)
     require('codemirror/addon/lint/lint.js')
     require('codemirror/addon/lint/lint.css')
-    require('codemirror/addon/lint/javascript-lint.js')
+    require('codemirror/addon/lint/html-lint.js')
   },
 
   mounted () {
@@ -72,11 +73,7 @@ export default {
         this.$emit('input', this.content)
       }
     })
-
-    if (!window.JSHINT) window.JSHINT = require('jshint').JSHINT
   },
-
-  beforeDestroy () { window.JSHINT = null },
 
   watch: {
     code (newVal, oldVal) {
