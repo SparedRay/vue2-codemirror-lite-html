@@ -1,23 +1,22 @@
 # Vue2 Codemirror Lite
-####[CodeMirror](http://codemirror.net/) component for Vue.js 2.x, configured for linting & js mode only to keep it light. 
+####[CodeMirror](http://codemirror.net/) component for Vue.js 2.x, configured for linting & html mode only to keep it light. 
 <a href="https://sireniaeu.github.io/vue2-codemirror-lite-js"><img src="https://cloud.githubusercontent.com/assets/1515742/21546469/9d452e38-cde7-11e6-8996-758e0ad9ff7c.jpg" alt="Vue2 Codemirror for JS screenshot"/></a>
 
-####[See demo](https://sireniaeu.github.io/vue2-codemirror-lite-js)
-
 ### Motivation
-For applications that only use CodeMirror for JavaScript, the bundle size can seriously be decreased by eliminating some of the features, themes and modes. 
+I basically wanted just the text highlight for editing html content, and since there is no way to do it with a simple textarea and css, i decided to modify the job from sireniaeu and adapt it to html instead of JS
 
 **This is not a fully-featured CodeMirror plugin** (that's why it's lite). If you are looking for that, please check out [vue-codemirror](https://surmon-china.github.io/vue-codemirror).
 
 Most things are pre-configured (i.e. mode, theme), but additional CodeMirror options can be set (see [Codemirror config APIs](http://codemirror.net/doc/manual.html#config)). 
 
 ### What's inside
-- JavaScript only mode (not configurable)
-- lint via JSHINT (bundled, not configurable)
-- dark theme only (`base16-dark`, [see demo](https://sireniaeu.github.io/vue2-codemirror-lite-js).)
+- HTML only mode (not configurable)
+- lint via HTMLHINT (bundled, not configurable)
+- light theme only (`mdn-like`, [see demo](https://sireniaeu.github.io/vue2-codemirror-lite-js).)
 - line numbers, line wrapping
 - accepts additional CodeMirror options ([see some here](http://codemirror.net/doc/manual.html)), except for mode, theme & those that require addons.
-- size: ~255kb / ~84kb gzipped
+
+I should edit the rest of readme later...
 
 ### Getting started
 Installing
