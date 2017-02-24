@@ -1,5 +1,5 @@
 # Vue2 Codemirror Lite
-####[CodeMirror](http://codemirror.net/) component for Vue.js 2.x, configured for linting & html mode only to keep it light. 
+####[CodeMirror](http://codemirror.net/) component for Vue.js 2.x, configured for html mode only to keep it light. 
 <a href="https://sireniaeu.github.io/vue2-codemirror-lite-js"><img src="https://cloud.githubusercontent.com/assets/1515742/21546469/9d452e38-cde7-11e6-8996-758e0ad9ff7c.jpg" alt="Vue2 Codemirror for JS screenshot"/></a>
 
 ### Motivation
@@ -11,31 +11,20 @@ Most things are pre-configured (i.e. mode, theme), but additional CodeMirror opt
 
 ### What's inside
 - HTML only mode (not configurable)
-- lint via HTMLHINT (bundled, not configurable)
 - light theme only (`mdn-like`, [see demo](https://sireniaeu.github.io/vue2-codemirror-lite-js).)
 - line numbers, line wrapping
 - accepts additional CodeMirror options ([see some here](http://codemirror.net/doc/manual.html)), except for mode, theme & those that require addons.
 
-I should edit the rest of readme later...
-
 ### Getting started
 Installing
 ``` bash
-npm install vue2-codemirror-lite-js --save # yarn add vue2-codemirror-lite-js
+npm install --save SparedRay/vue2-codemirror-lite-html
 ```
 
 Usage
 ``` javascript
-// Require in Webpack.
-var Vue = require('vue')
-var CodeMirrorLiteJs = require('vue2-codemirror-lite-js')
-
-Vue.use(CodeMirrorLiteJs)
-
-
-// Or use as component (ES6)
 import Vue from 'vue'
-import { codemirror } from 'vue2-codemirror-lite-js'
+import { codemirror } from 'vue2-codemirror-lite-html'
 
 export default {
   components: {
@@ -71,11 +60,9 @@ Usage in template
     @changed="yourCodeChangeMethod">
 </codemirror>
 ```
+lint is disabled since it is useless for my evil purposes
 
-Lint options are equivalent to JSHINT options (or what you'd normally put in .jshintrc). See all the options [here](https://github.com/jshint/jshint/blob/master/examples/.jshintrc) 
-
-
-There's also a [code example](https://github.com/sireniaeu/vue2-codemirror-lite-js/tree/master/demo/index.html) available in the source.
+There's also a [code example](https://github.com/SparedRay/vue2-codemirror-lite-html/tree/master/demo/index.html) available in the source.
 
 ### Developing
 There's a simple webpack config setup to get you started. 
@@ -95,13 +82,5 @@ Feel free to contribute to the build config and make it better :)
 ### Contributing
 Contributions are welcome for additional options, themes and modes that don't increase the bundle size. Ideally, if you want to contribute split your code.
 
-### Changelog
-
-#####v3.0.6
-- Moved to Sireniaeu
-
-#####v3.0.5
-- Added watcher for replaceRange, essentially allowing to replace or insert text at line & ch.
-
-#####v3.0.4 
-- Added lint options for jshint (`.jshintrc`-like)
+### Disclaimer
+All the original code is from [sireniaeu](https://github.com/sireniaeu/), i just copy their code and adapt it to highlight HTML

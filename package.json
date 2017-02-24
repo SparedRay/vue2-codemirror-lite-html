@@ -1,7 +1,7 @@
 {
-  "name": "vue2-codemirror-lite-js",
-  "version": "3.0.6",
-  "description": "Lite Codemirror component for JavaScript code / Vue.js 2.x",
+  "name": "vue2-codemirror-lite-html",
+  "version": "3.0.7",
+  "description": "Lite Codemirror component for HTML code / Vue.js 2.x",
   "main": "index.js",
   "scripts": {
     "serve": "node_modules/.bin/webpack-dev-server --open",
@@ -10,26 +10,26 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sireniaeu/vue2-codemirror-lite-js"
+    "url": "https://github.com/SparedRay/vue2-codemirror-lite-html"
   },
   "keywords": [
     "vue-codemirror",
     "vue codemirror",
     "codemirror",
     "vue",
-    "vue codemirror lite js",
-    "vue-codemirror-lite-js"
+    "html highlight",
+    "vue codemirror lite html",
+    "vue-codemirror-lite-html"
   ],
   "author": {
-    "name": "Dan Mindru",
-    "email": "dm@fadeit.dk",
-    "url": "http://mindrudan.com"
+    "name": "Alfredo Cabello",
+    "email": "icehealt.alf@gmail.com"
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/sireniaeu/vue2-codemirror-lite-js/issues"
+    "url": "https://github.com/SparedRay/vue2-codemirror-lite-html/issues"
   },
-  "homepage": "https://github.com/sireniaeu/vue2-codemirror-lite-js#readme",
+  "homepage": "https://github.com/SparedRay/vue2-codemirror-lite-html#readme",
   "dependencies": {
     "codemirror": "^5.19.0",
     "htmlhint": "^0.9.13"
