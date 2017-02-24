@@ -11,7 +11,7 @@ Most things are pre-configured (i.e. mode, theme), but additional CodeMirror opt
 
 ### What's inside
 - HTML only mode (not configurable)
-- light theme only (`mdn-like`, [see demo](https://sireniaeu.github.io/vue2-codemirror-lite-js).)
+- dark theme only (`ambiance-mobile`, [see demo](https://sireniaeu.github.io/vue2-codemirror-lite-js).)
 - line numbers, line wrapping
 - accepts additional CodeMirror options ([see some here](http://codemirror.net/doc/manual.html)), except for mode, theme & those that require addons.
 

@@ -3,7 +3,7 @@
 </template>
 
 <script>
-const theme = 'mdn-like'
+const theme = 'ambiance-mobile'
 const mode = 'xml'
 const CodeMirror = require('codemirror/lib/codemirror.js')
 require('codemirror/lib/codemirror.css')
@@ -34,15 +34,8 @@ export default {
           line: true,
           lineNumbers: true,
           lineWrapping: true,
-          lint: true,
           gutters: ['CodeMirror-linenumbers', 'CodeMirror-lint-markers']
         }
-      }
-    },
-    lintOptions: {
-      type: Object,
-      default: function () {
-        return { sub: true }
       }
     },
     replaceRange: {
@@ -56,13 +49,10 @@ export default {
   created () {
     // Require language mode config & basic addons.
     require(`codemirror/mode/xml/xml.js`)
-    require('codemirror/addon/lint/lint.js')
-    require('codemirror/addon/lint/lint.css')
-    require('codemirror/addon/lint/html-lint.js')
   },
 
   mounted () {
-    const options = { ...this.options, lint: this.lintOptions, theme: theme }
+    const options = { ...this.options, theme: theme }
     this.editor = CodeMirror.fromTextArea(this.$el, options)
     this.editor.setValue(this.code || this.value || this.content)
 
